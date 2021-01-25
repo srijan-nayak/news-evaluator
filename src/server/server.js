@@ -1,6 +1,8 @@
+require("dotenv").config();
+const API_KEY = process.env.API_KEY;
+
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 
 const { fetchAnalysisWithText } = require("./fetchAnalysis");
 
@@ -12,14 +14,9 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-const API_KEY = process.env.API_KEY;
-
 app.get("/text-fetch/:text", async (request, response) => {
   const encodedText = request.params.text;
-  const fetchResponse = await fetchAnalysisWithText({
-    text: encodedText,
-    apiKey: API_KEY,
-  });
+  const fetchResponse = await fetchAnalysisWithText(encodedText, API_KEY);
   response.send(fetchResponse);
 });
 
