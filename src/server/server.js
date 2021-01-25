@@ -16,11 +16,11 @@ const API_KEY = process.env.API_KEY;
 
 app.get("/text-fetch/:text", async (request, response) => {
   const encodedText = request.params.text;
-  const response = await fetchAnalysisWithText({
+  const fetchResponse = await fetchAnalysisWithText({
     text: encodedText,
     apiKey: API_KEY,
   });
-  response.send(response);
+  response.send(fetchResponse);
 });
 
 const port = 3000;
