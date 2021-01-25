@@ -18,14 +18,14 @@ app.use(cors());
 app.use(express.static("public"));
 
 app.get("/text-fetch/:text", async (request, response) => {
-  const encodedText = request.params.text;
-  const fetchResponse = await fetchAnalysisWithText(encodedText, API_KEY);
+  const text = request.params.text;
+  const fetchResponse = await fetchAnalysisWithText(text, API_KEY);
   response.send(fetchResponse);
 });
 
 app.get("/url-fetch/:url", async (request, response) => {
-  const encodedUrl = request.params.url;
-  const fetchResponse = await fetchAnalysisWithUrl(encodedUrl, API_KEY);
+  const url = request.params.url;
+  const fetchResponse = await fetchAnalysisWithUrl(url, API_KEY);
   response.send(fetchResponse);
 });
 
