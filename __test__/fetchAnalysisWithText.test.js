@@ -17,10 +17,7 @@ The cumulative number of healthcare workers vaccinated against COVID-19 has cros
 15,37,190 beneficiaries on Saturday were vaccinated through 27,776 sessions till 6 PM, as per the provisional report of the government.`);
 
 test("Fetch sentiment analysis with valid api key and text input", async () => {
-  const { data, ok } = await fetchAnalysisWithText({
-    text: encodedText,
-    apiKey: API_KEY,
-  });
+  const { data, ok } = await fetchAnalysisWithText(encodedText, API_KEY);
 
-  ok ? expect(data.status.code).toBeDefined() : expect(data).toBeNull();
+  ok ? expect(data.status.code).toEqual("0") : expect(data).toBeNull();
 });

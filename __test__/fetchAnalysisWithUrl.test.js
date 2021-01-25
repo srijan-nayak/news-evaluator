@@ -7,10 +7,7 @@ const encodedUrl = encodeURIComponent(
 );
 
 test("Fetch sentiment analysis with valid api key and URL input", async () => {
-  const { data, ok } = await fetchAnalysisWithUrl({
-    url: encodedUrl,
-    apiKey: API_KEY,
-  });
+  const { data, ok } = await fetchAnalysisWithUrl(encodedUrl, API_KEY);
 
-  ok ? expect(data.status.code).toBeDefined() : expect(data).toBeNull();
+  ok ? expect(data.status.code).toEqual("0") : expect(data).toBeNull();
 });
