@@ -2,7 +2,7 @@ require("dotenv").config();
 const { fetchAnalysisWithText } = require("../src/server/fetchAnalysis");
 
 const API_KEY = process.env.API_KEY;
-const encodedText = encodeURIComponent(`New Delhi:
+const text = `New Delhi:
 
 The deaths of six healthcare workers, who were inoculated, are not related to the Covid vaccinations, the Union Health Ministry said on Saturday.
 
@@ -14,10 +14,10 @@ Mr Agnani also said that 11 people have been hospitalised so far.
 
 The cumulative number of healthcare workers vaccinated against COVID-19 has crossed 15 lakhs on the eighth day of vaccination.
 
-15,37,190 beneficiaries on Saturday were vaccinated through 27,776 sessions till 6 PM, as per the provisional report of the government.`);
+15,37,190 beneficiaries on Saturday were vaccinated through 27,776 sessions till 6 PM, as per the provisional report of the government.`;
 
 test("Fetch sentiment analysis with valid api key and text input", async () => {
-  const { data, ok } = await fetchAnalysisWithText(encodedText, API_KEY);
+  const { data, ok } = await fetchAnalysisWithText(text, API_KEY);
 
   ok ? expect(data.status.code).toEqual("0") : expect(data).toBeNull();
 });
