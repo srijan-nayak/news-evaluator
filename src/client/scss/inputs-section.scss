@@ -14,7 +14,7 @@ $input-placeholder-color: #b4a5be;
 
   .input-group,
   p {
-    margin-bottom: variables.$font-size * 2;
+    margin-bottom: variables.$margin-bottom-medium;
   }
 
   button {
@@ -50,7 +50,7 @@ $input-placeholder-color: #b4a5be;
   label {
     color: #fff;
     font-size: variables.$font-size-medium;
-    margin-bottom: variables.$font-size;
+    margin-bottom: variables.$margin-bottom-small;
   }
 
   input,
