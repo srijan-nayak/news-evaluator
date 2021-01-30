@@ -1,16 +1,16 @@
-@use 'base';
+@use "variables";
 
 .header {
-  background-color: base.$primary-color;
+  background-color: variables.$primary-color;
   display: flex;
   align-items: center;
-  height: base.$font-size * 4;
+  height: variables.$font-size * 4;
   box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
   position: sticky;
 
   .title {
     color: #fff;
-    font-size: base.$font-size * 2;
-    margin-left: base.$font-size * 1.5;
+    font-size: variables.$font-size * 2;
+    margin-left: variables.$font-size * 1.5;
   }
 }

@@ -1,7 +1,4 @@
-$primary-color: #6c6ea0;
-$secondary-color: #765d87;
-$font-stack: "Roboto", sans-serif;
-$font-size: 1.8rem;
+@use "variables";
 
 * {
   box-sizing: border-box;
@@ -16,5 +13,5 @@ html {
 body {
   background-color: #eef0f2;
   min-height: 100vh;
-  font-family: $font-stack;
+  font-family: variables.$font-stack;
 }
