@@ -1,4 +1,11 @@
 $primary-color: #6c6ea0;
 $secondary-color: #765d87;
+
 $font-stack: "Roboto", sans-serif;
+
 $font-size: 1.8rem;
+$font-size-small: $font-size * 1.2;
+$font-size-medium: $font-size * 1.5;
+$font-size-large: $font-size * 2;
+
+$section-padding: $font-size * 1.5;

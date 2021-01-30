@@ -5,10 +5,10 @@ $input-placeholder-color: #b4a5be;
 
 .inputs-section {
   background-color: variables.$secondary-color;
-  padding: variables.$font-size * 1.5;
+  padding: variables.$section-padding;
 
   p {
-    font-size: variables.$font-size * 1.5;
+    font-size: variables.$font-size-medium;
     color: scale-color($color: variables.$secondary-color, $lightness: 70%);
   }
 
@@ -21,7 +21,7 @@ $input-placeholder-color: #b4a5be;
     background-color: variables.$primary-color;
     border: none;
     color: #fff;
-    font-size: variables.$font-size * 1.5;
+    font-size: variables.$font-size-medium;
     padding: variables.$font-size * 0.5 variables.$font-size;
     box-shadow: 0px 5px 25px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-0.5rem);
@@ -49,7 +49,7 @@ $input-placeholder-color: #b4a5be;
 
   label {
     color: #fff;
-    font-size: variables.$font-size * 1.5;
+    font-size: variables.$font-size-medium;
     margin-bottom: variables.$font-size;
   }
 
@@ -58,8 +58,7 @@ $input-placeholder-color: #b4a5be;
     background-color: $input-color;
     border: none;
     padding: variables.$font-size variables.$font-size * 1.5;
-    font-size: variables.$font-size * 1.2;
-    font-family: variables.$font-stack;
+    font-size: variables.$font-size-small;
     color: #fff;
 
     &::placeholder {
@@ -69,6 +68,7 @@ $input-placeholder-color: #b4a5be;
   }
 
   textarea {
+    font-family: variables.$font-stack;
     height: variables.$font-size * 10;
     resize: none;
   }
