@@ -1,3 +1,8 @@
+$primary-color: #6c6ea0;
+$secondary-color: #765d87;
+$font-stack: "Roboto", sans-serif;
+$font-size: 1.8rem;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,8 +16,5 @@ html {
 body {
   background-color: #eef0f2;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-stack;
 }
-
-$primary-color: #6c6ea0;
-$font-size: 1.8rem;
