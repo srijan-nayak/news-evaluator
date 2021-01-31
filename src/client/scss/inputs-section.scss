@@ -67,6 +67,11 @@ $input-placeholder-color: #b4a5be;
       opacity: 1;
       color: $input-placeholder-color;
     }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 60%;
+    }
   }
 
   textarea {

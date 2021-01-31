@@ -1,4 +1,6 @@
-console.log("stuff works");
+import toggleDisabledInputs from "./toggleDisabledInput";
+
+toggleDisabledInputs();
 
 const inputsForm = document.querySelector(".inputs-section form");
 inputsForm.addEventListener("submit", (event) => {
