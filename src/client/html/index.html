@@ -4,11 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News Sentiment Analyser</title>
+  <title>News Evaluator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>News Sentiment Analyser</h1>
+  <header class="header">
+    <span class="title">News Evaluator</span>
+  </header>
+
+  <main class="main-container">
+    <section class="inputs-section">
+      <form>
+        <div class="input-group">
+          <label for="news-url">URL</label>
+          <input type="url" id="news-url" placeholder="Enter URL of news article">
+        </div>
+        <p>Or</p>
+        <div class="input-group">
+          <label for="news-text">Text</label>
+          <textarea id="news-text" placeholder="Enter news article as text"></textarea>
+        </div>
+        <button type="submit">Evaluate</button>
+      </form>
+    </section>
+
+    <section class="output-section">
+      <div class="card">
+        <h1>Sentiment Analysis</h1>
+        <div class="output-container">
+          <div class="output-group">
+            <h2>Polarity</h2>
+            <p id="score_tag">N/A</p>
+          </div>
+          <div class="output-group">
+            <h2>Agreement between sentiments detected in text</h2>
+            <p id="agreement">N/A</p>
+          </div>
+          <div class="output-group">
+            <h2>Subjectivity</h2>
+            <p id="subjectivity">N/A</p>
+          </div>
+          <div class="output-group">
+            <h2>Analysis confidence</h2>
+            <p id="confidence">N/A</p>
+          </div>
+          <div class="output-group">
+            <h2>Irony</h2>
+            <p id="irony">N/A</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

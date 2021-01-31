@@ -1,0 +1,77 @@
+@use "variables";
+
+$input-color: #554064;
+$input-placeholder-color: #b4a5be;
+
+.inputs-section {
+  background-color: variables.$secondary-color;
+  padding: variables.$section-padding;
+
+  p {
+    font-size: variables.$font-size-medium;
+    color: scale-color($color: variables.$secondary-color, $lightness: 70%);
+  }
+
+  .input-group,
+  p {
+    margin-bottom: variables.$margin-bottom-medium;
+  }
+
+  button {
+    background-color: variables.$primary-color;
+    border: none;
+    color: #fff;
+    font-size: variables.$font-size-medium;
+    padding: variables.$font-size * 0.5 variables.$font-size;
+    box-shadow: variables.$shadow-elevation-high;
+    border-radius: variables.$border-radius;
+    transform: translateY(-0.3rem);
+    transition: all 200ms ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: scale-color(
+        $color: variables.$primary-color,
+        $lightness: 10%
+      );
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: variables.$shadow-elevation-low;
+      transform: translateY(0);
+    }
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: #fff;
+    font-size: variables.$font-size-medium;
+    margin-bottom: variables.$margin-bottom-small;
+  }
+
+  input,
+  textarea {
+    background-color: $input-color;
+    border: none;
+    padding: variables.$font-size variables.$font-size * 1.5;
+    font-size: variables.$font-size-small;
+    border-radius: variables.$border-radius;
+    color: #fff;
+
+    &::placeholder {
+      opacity: 1;
+      color: $input-placeholder-color;
+    }
+  }
+
+  textarea {
+    font-family: variables.$font-stack;
+    height: variables.$font-size * 10;
+    resize: none;
+  }
+}

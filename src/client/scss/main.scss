@@ -1,0 +1,14 @@
+@use 'variables';
+
+@media (min-width: 1200px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+  }
+
+  .inputs-section,
+  .output-section {
+    height: calc(100vh - #{variables.$font-size * 4});
+    overflow-y: auto;
+  }
+}

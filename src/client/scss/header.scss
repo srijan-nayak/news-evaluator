@@ -1,0 +1,16 @@
+@use "variables";
+
+.header {
+  background-color: variables.$primary-color;
+  display: flex;
+  align-items: center;
+  height: variables.$font-size * 4;
+  box-shadow: variables.$shadow-elevation-low;
+  position: sticky;
+
+  .title {
+    color: #fff;
+    font-size: variables.$font-size * 2;
+    margin-left: variables.$font-size * 1.5;
+  }
+}
