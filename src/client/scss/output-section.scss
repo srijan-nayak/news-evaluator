@@ -34,3 +34,10 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: 1024px) {
+  .output-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
