@@ -2,6 +2,7 @@ import toggleDisabledInputs from "./toggleDisabledInput";
 import getActiveInput from "./getActiveInput";
 import hasValidValue from "./hasValidValue";
 import fetchData from "./fetchData";
+import updateOutputCard from "./updateOutputCard";
 
 toggleDisabledInputs();
 
@@ -14,8 +15,8 @@ inputsForm.addEventListener("submit", (event) => {
     const outputCard = document.querySelector(".card");
     outputCard.classList.add("loading");
     fetchData(activeInput).then((data) => {
+      data.ok ? updateOutputCard(data) : handleError(data);
       outputCard.classList.remove("loading");
-      console.log(data);
     });
   }
 });
