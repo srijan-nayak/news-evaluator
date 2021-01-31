@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   height: variables.$font-size * 4;
-  box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: variables.$shadow-elevation-low;
   position: sticky;
 
   .title {

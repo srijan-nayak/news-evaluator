@@ -23,9 +23,9 @@ $input-placeholder-color: #b4a5be;
     color: #fff;
     font-size: variables.$font-size-medium;
     padding: variables.$font-size * 0.5 variables.$font-size;
-    box-shadow: 0px 5px 25px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: variables.$shadow-elevation-high;
     border-radius: variables.$border-radius;
-    transform: translateY(-0.5rem);
+    transform: translateY(-0.3rem);
     transition: all 200ms ease-out;
 
     &:hover,
@@ -38,7 +38,7 @@ $input-placeholder-color: #b4a5be;
     }
 
     &:active {
-      box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: variables.$shadow-elevation-low;
       transform: translateY(0);
     }
   }
