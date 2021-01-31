@@ -24,6 +24,7 @@ $input-placeholder-color: #b4a5be;
     font-size: variables.$font-size-medium;
     padding: variables.$font-size * 0.5 variables.$font-size;
     box-shadow: 0px 5px 25px 10px rgba(0, 0, 0, 0.5);
+    border-radius: variables.$border-radius;
     transform: translateY(-0.5rem);
     transition: all 200ms ease-out;
 
@@ -59,6 +60,7 @@ $input-placeholder-color: #b4a5be;
     border: none;
     padding: variables.$font-size variables.$font-size * 1.5;
     font-size: variables.$font-size-small;
+    border-radius: variables.$border-radius;
     color: #fff;
 
     &::placeholder {
