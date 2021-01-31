@@ -1,0 +1,36 @@
+@use "variables";
+
+.output-section {
+  padding: variables.$section-padding;
+}
+
+.card {
+  background-color: #fff;
+  padding: variables.$section-padding;
+  box-shadow: variables.$shadow-elevation-low;
+  border-radius: variables.$border-radius;
+
+  h1 {
+    font-size: variables.$font-size-large;
+    color: variables.$primary-color;
+    margin-bottom: variables.$margin-bottom-large;
+  }
+}
+
+.output-group {
+  margin-bottom: variables.$margin-bottom-medium;
+
+  h2 {
+    color: variables.$secondary-color;
+    font-size: variables.$font-size-medium;
+    margin-bottom: variables.$margin-bottom-small;
+  }
+
+  p {
+    font-size: variables.$font-size-small;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
