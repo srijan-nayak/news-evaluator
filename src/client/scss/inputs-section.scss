@@ -2,6 +2,7 @@
 
 $input-color: #554064;
 $input-placeholder-color: #b4a5be;
+$error-color: #ff9494;
 
 .inputs-section {
   background-color: variables.$secondary-color;
@@ -72,6 +73,21 @@ $input-placeholder-color: #b4a5be;
       pointer-events: none;
       opacity: 60%;
     }
+
+    & + small {
+      display: none;
+    }
+  }
+
+  .invalid {
+    outline: solid 1px $error-color;
+    margin-bottom: variables.$margin-bottom-small;
+  }
+
+  .invalid + small {
+    display: block;
+    font-size: variables.$font-size-small;
+    color: $error-color;
   }
 
   textarea {
