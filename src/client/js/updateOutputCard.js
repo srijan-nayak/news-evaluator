@@ -5,7 +5,7 @@ const updateOutputCard = (data) => {
     subjectivity,
     confidence,
     irony
-  } = data.data;
+  } = data;
 
   const polarity = {
     NEU: "NEUTRAL",
