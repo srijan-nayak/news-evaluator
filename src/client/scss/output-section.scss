@@ -64,7 +64,7 @@
 
   .output-container {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, minmax(3rem, max-content));
     column-gap: variables.$font-size * 4;
   }
 }
