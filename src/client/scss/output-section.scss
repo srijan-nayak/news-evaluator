@@ -9,11 +9,26 @@
   padding: variables.$section-padding;
   box-shadow: variables.$shadow-elevation-low;
   border-radius: variables.$border-radius;
+  transition: opacity 1s ease-in-out;
 
   h1 {
     font-size: variables.$font-size-large;
     color: variables.$primary-color;
     margin-bottom: variables.$margin-bottom-large;
+  }
+}
+
+.loading .output-group {
+  animation: loading 1s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+  from {
+    opacity: 60%;
+  }
+
+  to {
+    opacity: 100%;
   }
 }
 
@@ -28,6 +43,7 @@
 
   p {
     font-size: variables.$font-size-small;
+    text-transform: capitalize;
   }
 
   &:last-child {
