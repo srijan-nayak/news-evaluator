@@ -6,12 +6,18 @@ Evaluate a news article using sentiment analysis provided by [MeaningCloud](http
 
 ## Installation steps
 
-Clone the repository and install npm packages.
+Clone the repository and install node packages.
 
 ```bash
 git clone https://github.com/srijan-nayak/news-evaluator.git
 cd news-evaluator
 npm install
+```
+
+Add your MeaningCloud API key to a .env file at the project root.
+
+```bash
+echo API_KEY=YOUR-API-KEY > .env
 ```
 
 ## Running dev server
