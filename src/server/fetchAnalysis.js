@@ -4,7 +4,10 @@ const fetchData = async (apiURL, params) => {
   try {
     const response = await fetch(apiURL, { method: "POST", body: params });
     const data = response.ok ? await response.json() : null;
-    const ok = data?.status.code === "0";
+    let ok = false;
+    if (data) {
+      ok = data.status.code === "0";
+    }
     return { ok, data };
   } catch (error) {
     console.log(error.message);
