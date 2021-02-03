@@ -2,7 +2,7 @@
   "name": "news-evaluator",
   "scripts": {
     "start": "node src/server/server.js",
-    "dev": "webpack serve --config webpack.config.dev.js --open",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --open",
     "build": "webpack --config webpack.config.prod.js",
     "test": "jest --testTimeout 10000"
   },
@@ -27,9 +27,9 @@
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
-    "webpack": "^5.16.0",
-    "webpack-cli": "^4.4.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2",
-    "workbox-webpack-plugin": "^6.1.0"
+    "workbox-webpack-plugin": "^5.1.4"
   }
 }
